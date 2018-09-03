@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorator="layout">
+<head>
+  <title>content1</title>
+  <meta name="keywords" content="content1" />
+  <meta name="description" content="content1" />
+</head>
+<body>
+
+  <!-- container -->
+  <div class="container">
+
+    <div layout:fragment="partial1">
+    <!-- partial1 start -->
+    <div class="row partial1">
+      <div class="col-md-12 well">
+        <h3>content1 - partial1</h3>
+
+        <table class="table table-striped" th:if="${list}">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>order Number</th>
+              <th>order Date</th>
+              <th>required Date</th>
+              <th>shipped Date</th>
+              <th>status</th>
+              <th>customer Number</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr th:each="order, status : ${list}" th:object="${order}">
+              <td th:text="${status.count}">#</td>
+              <td th:text="*{orderNumber}">orderNumber</td>
+              <td th:text="*{orderDate}">orderDate</td>
+              <td th:text="*{requiredDate}">requiredDate</td>
+              <td th:text="*{shippedDate}">shippedDate</td>
+              <td th:text="*{status}">status</td>
+              <td th:text="*{customerNumber}">customerNumber</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- partial1 end -->
+    </div>
+
+    <div layout:fragment="partial2">
+    <!-- partial2 start -->
+    <div class="row partial2">
+      <div class="col-md-12 well">
+        <h3>content1 - partial2</h3>
+        <div>
+          <ul>
+            <li th:text="${msg1}">message1</li>
+            <li th:text="${msg2}">message2</li>
+            <li th:text="${msg3}">message3</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- partial2 end -->
+    </div>
+
+    <div layout:fragment="partial3">
+    <!-- partial3 start -->
+    <div layout:include="Index/partial3 :: partial(${msg1}, ${msg2}, ${msg3})" class="row"></div>
+    <!-- partial3 end -->
+    </div>
+
+    <div layout:fragment="scripts">
+      <!-- content1 page scripts -->
+      <script src="js/content1.js" th:src="@{js/content1.js}" type="text/javascript"></script>
+    </div>
+
+  </div>
+  <!-- container -->
+
+</body>
+</html>

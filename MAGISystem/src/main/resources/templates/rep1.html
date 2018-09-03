@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<body>
+
+  <div layout:fragment="partial(msg1, msg2, msg3)" class="row">
+    <div class="col-md-12 well">
+      <h3>partial - replace</h3>
+      <div>
+        <ul>
+          <li th:text="${msg1}">message1</li>
+          <li th:text="${msg2}">message2</li>
+          <li th:text="${msg3}">message3</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

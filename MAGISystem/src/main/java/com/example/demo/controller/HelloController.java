@@ -10,6 +10,6 @@ public class HelloController {
 	@RequestMapping("/")
 	public String firstView(Model model) {
 		model.addAttribute("hello", "ごはんが美味しい季節です");
-		return "hello";
+		return "layout";
 	}
 }

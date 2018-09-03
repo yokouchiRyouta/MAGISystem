@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<body>
+
+    <div layout:fragment="partial(id, header)">
+      <div class="col-md-12 well">
+        <h3>partial - include</h3>
+        <div>
+          <ul>
+            <li th:text="${id}">id</li>
+            <li th:text="${header}">header</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</body>
+</html>
