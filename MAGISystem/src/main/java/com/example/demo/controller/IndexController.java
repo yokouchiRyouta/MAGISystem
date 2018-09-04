@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.example.demo.domain.Magi;
 import com.example.demo.domain.Orders;
 
 @Controller
@@ -67,6 +68,49 @@ public class IndexController {
 		model.addAttribute("order", order);
 
 		return "Index/content2";
+	}
+
+	@RequestMapping(value = "MAGI-MERCHIOR", method = RequestMethod.GET)
+	public String merchior(Model model) {
+		logger.debug("IndexController:[content1] Passing through...");
+
+		Magi magiMerchior = new Magi();
+		magiMerchior.setId("1");
+		magiMerchior.setName("MAGI-MERCHIOR");
+		magiMerchior.setConcept("scientist");
+		magiMerchior.setStatus("第一のマギ");
+
+		model.addAttribute("magi", magiMerchior);
+
+		return "Magi/merchior";
+	}
+
+	@RequestMapping(value = "MAGI-BALTHASAR", method = RequestMethod.GET)
+	public String balthasar(Model model) {
+		logger.debug("IndexController:[content2] Passing through...");
+		Magi magiMerchior = new Magi();
+		magiMerchior.setId("2");
+		magiMerchior.setName("MAGI-BALTHASAR");
+		magiMerchior.setConcept("mother");
+		magiMerchior.setStatus("第二のマギ");
+
+		model.addAttribute("magi", magiMerchior);
+
+		return "Magi/balthasar";
+	}
+
+	@RequestMapping(value = "MAGI-CASPER", method = RequestMethod.GET)
+	public String casper(Model model) {
+		logger.debug("IndexController:[content2] Passing through...");
+		Magi magiMerchior = new Magi();
+		magiMerchior.setId("3");
+		magiMerchior.setName("MAGI-CASPER");
+		magiMerchior.setConcept("woman");
+		magiMerchior.setStatus("第三のマギ");
+
+		model.addAttribute("magi", magiMerchior);
+
+		return "Magi/casper";
 	}
 
 }

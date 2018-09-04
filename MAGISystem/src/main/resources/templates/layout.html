@@ -8,6 +8,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link href="/vendor/bootstrap-3.3.5/css/bootstrap.min.css" th:href="@{/vendor/bootstrap-3.3.5/css/bootstrap.min.css}" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="layout.css">
 </head>
 <body>
 
@@ -15,15 +16,16 @@
   <div class="container">
 
     <div class="page-header">
-      <h1>header</h1>
+      <h1>MAGI SYSTEM</h1>
     </div>
 
     <!-- navi start -->
     <div class="row navi">
       <div class="col-md-12">
         <ul class="nav nav-pills">
-          <li role="presentation"><a href="/content1" th:href="@{/content1}">content1</a></li>
-          <li role="presentation"><a href="/content2" th:href="@{/content2}">content2</a></li>
+          <li role="presentation"><a href="/MAGI-MERCHIOR" th:href="@{/MAGI-MERCHIOR}">MAGI-MERCHIOR</a></li>
+          <li role="presentation"><a href="/MAGI-BALTHASAR" th:href="@{/MAGI-BALTHASAR}">MAGI-BALTHASAR</a></li>
+          <li role="presentation"><a href="/MAGI-CASPER" th:href="@{/MAGI-CASPER}">MAGI-CASPER</a></li>
         </ul>
       </div>
     </div>
@@ -64,5 +66,20 @@
 
   <script src="/vendor/jquery/jquery-1.11.3.js" th:src="@{/vendor/jquery/jquery-1.11.3.js}"></script>
   <script src="/vendor/bootstrap-3.3.5/js/bootstrap.js" th:src="@{/vendor/bootstrap-3.3.5/js/bootstrap.js}"></script>
+  
+  <form action="/my-handling-form-page" method="post">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="user_name">
+  </div>
+  <div>
+    <label for="mail">E-mail:</label>
+    <input type="email" id="mail" name="user_mail">
+  </div>
+  <div>
+    <label for="msg">Message:</label>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
+</form>
 </body>
 </html>

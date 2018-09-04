@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+  <title>casper</title>
+  <link rel="stylesheet" type="text/css" href="magi.css">
+  <meta name="keywords" content="casper" />
+  <meta name="description" content="casper" />
+</head>
+<body>
+  <!-- container -->
+  <div class="container">
+
+    <div layout:fragment="partial1">
+    <!-- partial1 start -->
+    <div class="row partial1">
+      <div class="col-md-12 well">
+        <h1>MAGI-CASPER</h1>
+        <table class="magi-table" th:if="${magi}" th:object="${magi}">
+          <tbody>
+            <tr>
+              <th class="field-label col-xs-3 active">id</th>
+              <td class="col-md-9" th:text="*{id}">id</td>
+            </tr>
+            <tr>
+              <th class="field-label col-xs-3 active">name</th>
+              <td class="col-md-9" th:text="*{name}">name</td>
+            </tr>
+            <tr>
+              <th class="field-label col-xs-3 active">concept</th>
+              <td class="col-md-9" th:text="*{concept}">concept</td>
+            </tr>
+            <tr>
+              <th class="field-label col-xs-3 active">status</th>
+              <td class="col-md-9" th:text="*{status}">status</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- partial1 end -->
+    </div>
+  </div>
+</body>
+</html>

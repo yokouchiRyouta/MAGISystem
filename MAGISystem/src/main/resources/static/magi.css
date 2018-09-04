@@ -1,0 +1,14 @@
+@charset "UTF-8";
+.magi-table {
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+.magi-table th,
+.magi-table td {
+    border: 1px solid #CCCCCC;
+    padding: 5px 10px;
+    text-align: left;
+}
+.magi-table th {
+    background-color: #CCCCCC;
+}

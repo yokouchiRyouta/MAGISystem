@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ <div layout:fragment="status(id, name, concept, status)">
+      <div class="col-md-12 well">
+        <h3>content1 - partial3</h3>
+        <div>
+          <ul>
+            <li th:text="${id}">value</li>
+            <li th:text="${name}">value</li>
+            <li th:text="${concept}">value</li>
+            <li th:text="${status}">value</li>
+          </ul>
+        </div>
+      </div>
+  </div>
+</body>
+</html>
