@@ -2,7 +2,7 @@
 form {
   /* フォームをページの中央に置く */
   margin: 0 auto;
-  width: 400px;
+  width: 90%;
   /* フォームの範囲がわかるようにする */
   padding: 1em;
   border: 1px solid #CCC;
@@ -16,8 +16,8 @@ form div + div {
 label {
   /* すべてのラベルを同じサイズにして、きちんと揃える */
   display: inline-block;
-  width: 90px;
-  text-align: right;
+  width: 200px;
+  text-align: left;
 }
 
 input, textarea {
@@ -26,7 +26,7 @@ input, textarea {
   font: 1em sans-serif;
 
   /* すべてのテキストフィールドを同じサイズにする */
-  width: 300px;
+  width: 90%;
   box-sizing: border-box;
 
   /* テキストフィールドのボーダーの外見を同一にする */
@@ -55,4 +55,21 @@ button {
   /* このマージンは、ラベルとテキストフィールドの間のスペースと
      おおよそ同じスペースを表す */
   margin-left: .5em;
+}
+
+.title-border {
+display: flex;
+align-items: right;
+}
+.title-border:before,
+.title-border:after {
+border-top: 1px solid;
+content: "";
+flex-grow: 1;
+}
+.title-border:before {
+margin-right: 1rem;
+}
+.title-border:after {
+margin-left: 1rem;
 }

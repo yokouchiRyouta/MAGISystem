@@ -11,7 +11,6 @@
   <link rel="stylesheet" type="text/css" href="layout.css">
 </head>
 <body>
-
   <!-- container start -->
   <div class="container">
 
@@ -53,10 +52,6 @@
     <!-- contents -->
     <div layout:fragment="partial3" th:remove="tag"></div>
 
-    <div class="page-footer">
-      <h3>footer</h3>
-    </div>
-
   </div>
   <!-- container end -->
 
@@ -68,18 +63,44 @@
   <script src="/vendor/bootstrap-3.3.5/js/bootstrap.js" th:src="@{/vendor/bootstrap-3.3.5/js/bootstrap.js}"></script>
   
   <form action="/my-handling-form-page" method="post">
+  <div class="page-footer">
+      <h3>コメントを残す</h3>
+      <p>メールアドレスが公開されることはありません。 * が付いている欄は必須項目です</p>
+  </div>
   <div>
-    <label for="name">Name:</label>
+    <label for="msg">コメント:</label><br>
+    <textarea id="msg" name="user_message"></textarea>
+  </div>
+  <div>
+    <label for="name">名前 *</label><br>
     <input type="text" id="name" name="user_name">
   </div>
   <div>
-    <label for="mail">E-mail:</label>
+    <label for="mail">メールアドレス *</label><br>
     <input type="email" id="mail" name="user_mail">
   </div>
-  <div>
-    <label for="msg">Message:</label>
-    <textarea id="msg" name="user_message"></textarea>
-  </div>
-</form>
+ </form>
+ <aside>
+  <img src="img/eva.jpg"><br>
+  <img src="img/evarink.jpg">
+ </aside>
+
+<div>
+<h3>参考</h3>
+<div class="title-border"></div>
+    <div class="row navi">
+      <div class="col-md-12">
+        <ul class="nav nav-pills">
+          <li role="presentation"><a href="/MAGI-MERCHIOR" th:href="@{/MAGI-MERCHIOR}">マギシステム（MAGIシステム）って何？【エヴァンゲリオンFANさいと】</a></li>
+          <li role="presentation"><a href="/MAGI-BALTHASAR" th:href="@{/MAGI-BALTHASAR}">MAGI - ウィキペディア</a></li>
+          <li role="presentation"><a href="/MAGI-CASPER" th:href="@{/MAGI-CASPER}">マギシステムとは？ - Qムービー</a></li>
+          <li role="presentation"><a href="/MAGI-CASPER" th:href="@{/MAGI-CASPER}">エヴァのスーパーコンピューター「MAGIシステム」は実在する - GIGAZINE</a></li>
+          <li role="presentation"><a href="/MAGI-CASPER" th:href="@{/MAGI-CASPER}">MAGI (まぎ)とは【ピクシブ百科事典】 - pixiv</a></li>
+          <li role="presentation"><a href="/MAGI-CASPER" th:href="@{/MAGI-CASPER}">エヴァンゲリオンにて赤木博士の作った、マギシステムの構造と... - Yahoo</a></li>
+          <li role="presentation"><a href="/MAGI-CASPER" th:href="@{/MAGI-CASPER}">エヴァ考察・MAGIは女性にしか開発できない - blog.livedoor.jp</a></li>
+        </ul>
+      </div>
+    </div>
+</div>
 </body>
 </html>
